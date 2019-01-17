@@ -39,6 +39,10 @@
             <th>Action</th>
         </thead>
         <tbody>
+            <?php 
+        include("retreive.php");
+            ?>
+            
 
         </tbody>
     </table>

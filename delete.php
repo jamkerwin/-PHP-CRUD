@@ -1,12 +1,11 @@
 <?php
 
 include("dbconnection.php"); // include database connection file and open a connection
-
 /* $_GET data
     id - get from URL query string using $_GET method */
 
 if( isset($_GET['id']) ) {
-    $id = mysqli_real_escape_string($conn, $_POST['id']);
+    $id = mysqli_real_escape_string($conn, $_GET['id']);
 
     /* delete record */
     $delete_data = mysqli_query($conn, "DELETE FROM users WHERE user_id=" . $id . ";");
